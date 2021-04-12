@@ -1,9 +1,9 @@
 # Minimalist Docker Wordpress MySQL PHPMyAdmin Boilerplate
-This is a minimalistic boilerplate project for simulating wordpress in docker. This project is good for developing plugins and themes for docker.
+This is a minimalistic boilerplate project for simulating wordpress in docker. This project is good for developing plugins and themes for wordpress using docker.
 
 
 ## Prerequisite
-The repository as name implies uses docker so the most important prerequisite is the docker and docker compose.  
+The bpiperplate uses docker so the most important prerequisite is the docker and docker compose.  
 
 1. [Install Docker](https://docs.docker.com/engine/install/)
 2. [Install Docker Compose](https://docs.docker.com/compose/install/)
@@ -13,7 +13,7 @@ The repository as name implies uses docker so the most important prerequisite is
 Once you have installed docker and docker compose, you can simply run the wordpress site by following the steps below. 
 
 * **LINUX**: on Linux you can get started by running `./start.sh` in the project directory.
-  * *you might will nedd to add executive permission to start.sh using `chmod +x start.sh` on linux*.
+  * you might will nedd to add executive permission to start.sh using `chmod +x start.sh` on linux.
   * It is best to run the start with `sudo`, otherwise you will require to provide password on exit as the `start.sh` is programmed to change the permission for files under `.docker` upon exit. If the permission isn't fixed the files under .docker becomes unaccessible.
 
 * **WINDOWS**: On Windows you can get started by running `./start.ps`, in powershell.
