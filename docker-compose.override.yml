@@ -1,0 +1,7 @@
+version: "3"
+services:
+  wordpress:
+    volumes:
+      - ${PROJECT_SRC_PLUGINS_DIR}/hello_world:${WP_PLUGINS_DIR}/hello_world
+      - ${PROJECT_SRC_PLUGINS_DIR}/hello_world_1:${WP_PLUGINS_DIR}/hello_world_1
+      - ${PROJECT_SRC_THEMES_DIR}/hello_world:${WP_THEMES_DIR}/hello_world

@@ -1,1 +1,4 @@
-mysql/**log
+mysql/**log*
+mysql/**.log
+mysql/**/*.log
+mysql/**/*log*
