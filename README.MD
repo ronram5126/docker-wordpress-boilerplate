@@ -17,6 +17,7 @@ Once you have installed docker and docker compose, you can simply run the wordpr
   * It is best to run the start with `sudo`, otherwise you will require to provide password on exit as the `start.sh` is programmed to change the permission for files under `.docker` upon exit. If the permission isn't fixed the files under .docker becomes unaccessible.
 
 * **WINDOWS**: On Windows you can get started by running `./start.ps`, in powershell.
+  * Running scripts might be disabled on your system. To eradicate this issue you can run `Set-ExecutionPolicy RemoteSigned -Scope CurrentUser`.
 
 Once you started the program in the respective platform, You can access the wordpress site via [http://localhost:8000](http://localhost:8000). 
 
