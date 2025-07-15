@@ -1,0 +1,6 @@
+{
+    "intelephense.environment.documentRoot": ".docker/wp/index.php",
+    "intelephense.environment.includePaths": [
+        ".docker/wp/wp-includes"
+    ]
+}

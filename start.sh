@@ -1,8 +1,8 @@
 #!/bin/bash
 
 update_project_directories() {
-    echo "version: \"3\"" > ./docker-compose.override.yml
-    echo "services:" >> ./docker-compose.override.yml
+    # echo "version: \"3\"" > ./docker-compose.override.yml
+    echo "services:" > ./docker-compose.override.yml
     echo "  wordpress:" >> ./docker-compose.override.yml
     echo "    volumes:" >> ./docker-compose.override.yml
 

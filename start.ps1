@@ -1,7 +1,7 @@
 function update_project_directories {
 
-    "version: ""3""" | Out-File ./docker-compose.override.yml
-    "services:" | Out-File -Append ./docker-compose.override.yml
+    # "version: ""3""" | Out-File ./docker-compose.override.yml
+    "services:" | Out-File ./docker-compose.override.yml
     "  wordpress:" | Out-File -Append  ./docker-compose.override.yml
     "    volumes:" | Out-File -Append  ./docker-compose.override.yml
 
