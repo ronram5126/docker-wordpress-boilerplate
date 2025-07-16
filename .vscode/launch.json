@@ -7,9 +7,13 @@
             "request": "launch",
             "port": 9003,
             "log": true,
+            
             "pathMappings": {
+                "/var/www/html/wp-content/plugins/hello_world":"${workspaceFolder}/src/plugins/hello_world",
+                "/var/www/html/wp-content/themes/hello_world":"${workspaceFolder}/src/themes/hello_world",
                 "/var/www/html/": "${workspaceFolder}/.docker/wp"
-            }
+            },
+            "preLaunchTask": "Pre-Debug Compound"
         }
     ]
 }

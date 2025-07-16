@@ -1,0 +1,83 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Update Project Directories",
+            "type": "shell",
+            "command": "python3",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "args": [
+                "${workspaceFolder}/.docker/update_project_directories.py"
+            ],
+            "problemMatcher": []
+        },
+        {
+            "label": "Setup Git Hook",
+            "type": "shell",
+            "command": "python3",
+            "args": [
+                "${workspaceFolder}/.docker/setup_git_hook.py"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}",
+                "env": {
+                    "WORKSPACE_DIR": "${workspaceFolder}"
+                }
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Check Docker Compose",
+            "type": "shell",
+            "command": "python3",
+            "args": [
+                "${workspaceFolder}/.docker/check_docker_services.py"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}",
+                "env": {
+                    "WORKSPACE_FOLDER": "${workspaceFolder}"
+                }
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Start Docker Compose",
+            "type": "shell",
+            "command": "docker-compose",
+            "args": [
+                "up"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "isBackground": true,
+            "problemMatcher": {
+                "pattern": [
+                    {
+                        "regexp": ".",
+                        "file": 1,
+                        "location": 2,
+                        "message": 0
+                    }
+                ],
+                "background": {
+                    "activeOnStart": true,
+                    "beginsPattern": ".",
+                    "endsPattern": "Attaching to"
+                }
+            }
+        },
+        {
+            "label": "Pre-Debug Compound",
+            "dependsOn": [
+                "Update Project Directories",
+                "Check Docker Compose",
+                "Start Docker Compose"
+            ],
+            "dependsOrder": "sequence"
+        }
+    ]
+}

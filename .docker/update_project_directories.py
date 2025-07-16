@@ -49,11 +49,13 @@ def update_project_directories():
             "request": "launch",
             "port": 9003,
             "log": true,
+            
             "pathMappings": {
 ''')
         f.write(path_mappings)
         f.write('''                "/var/www/html/": "${workspaceFolder}/.docker/wp"
-            }
+            },
+            "preLaunchTask": "Pre-Debug Compound"
         }
     ]
 }

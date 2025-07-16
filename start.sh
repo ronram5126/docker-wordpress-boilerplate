@@ -22,8 +22,8 @@ exit_trap() {
 
 }
 
-# trap exit_trap EXIT
-# trap exit_trap SIGTERM
+trap exit_trap EXIT
+trap exit_trap SIGTERM
 
 update_project_directories
 

@@ -1,2 +1,3 @@
-# If uncomment the line below to ignore the contents from git commit.
-# .docker
+# Ignores the docker files mounted under .docker directory
+.docker/mysql
+.docker/wp
